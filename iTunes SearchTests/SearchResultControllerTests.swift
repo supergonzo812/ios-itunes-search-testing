@@ -22,7 +22,7 @@ import XCTest
  */
 
 class SearchResultControllerTests: XCTestCase {
-
+    
     func testForSomeResults() {
         let controller = SearchResultController()
         
@@ -31,9 +31,41 @@ class SearchResultControllerTests: XCTestCase {
                                  resultType: .software) {
                                     expectation.fulfill()
         }
-        
         wait(for: [expectation],
              timeout: 5)
     }
-
+    
+    func testSpeedOfTypicalRequest() {
+        measure {
+            let controller = SearchResultController()
+            
+            let expectation = self.expectation(description: "Wait for results")
+            controller.performSearch(for: "GarageBand",
+                                     resultType: .software) {
+                                        expectation.fulfill()
+            }
+            wait(for: [expectation],
+                 timeout: 5)
+        }
+        
+    }
+    
+    func testSpeedOfTypicalRequestMoreAccureatly() {
+        measureMetrics([.wallClockTime],
+                       automaticallyStartMeasuring: false) {
+                        let controller = SearchResultController()
+                        
+                        let expectation = self.expectation(description: "Wait for results")
+                        
+                        self.startMeasuring()
+                        
+                        controller.performSearch(for: "GarageBand",
+                                                 resultType: .software) {
+                                                    expectation.fulfill()
+                        }
+                        wait(for: [expectation],
+                             timeout: 5)
+        }
+    }
+    
 }
