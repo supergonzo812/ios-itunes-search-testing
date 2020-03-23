@@ -28,7 +28,7 @@ class SearchResultController {
         
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.get.rawValue
-    
+        
         dataLoader.loadData(using: request) { (data, _, error) in
             
             if let error = error { NSLog("Error fetching data: \(error)") }
@@ -48,8 +48,8 @@ class SearchResultController {
         }
         
     }
-}
-
-let baseURL = URL(string: "https://itunes.apple.com/search")!
-var searchResults: [SearchResult] = []
+    
+    
+    let baseURL = URL(string: "https://itunes.apple.com/search")!
+    var searchResults: [SearchResult] = []
 }
