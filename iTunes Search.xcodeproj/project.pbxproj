@@ -19,6 +19,7 @@
 		7266C5972429186600AA5FB0 /* SearchResultControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266C5962429186600AA5FB0 /* SearchResultControllerTests.swift */; };
 		7266C5A02429212F00AA5FB0 /* NetworkDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266C59F2429212F00AA5FB0 /* NetworkDataLoader.swift */; };
 		7266C5A22429221000AA5FB0 /* URLSession+NetworkDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266C5A12429221000AA5FB0 /* URLSession+NetworkDataLoader.swift */; };
+		7266C5A42429265A00AA5FB0 /* MockDataLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266C5A32429265A00AA5FB0 /* MockDataLoading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		7266C5982429186600AA5FB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7266C59F2429212F00AA5FB0 /* NetworkDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataLoader.swift; sourceTree = "<group>"; };
 		7266C5A12429221000AA5FB0 /* URLSession+NetworkDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+NetworkDataLoader.swift"; sourceTree = "<group>"; };
+		7266C5A32429265A00AA5FB0 /* MockDataLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataLoading.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				7266C5962429186600AA5FB0 /* SearchResultControllerTests.swift */,
+				7266C5A32429265A00AA5FB0 /* MockDataLoading.swift */,
 				7266C5982429186600AA5FB0 /* Info.plist */,
 			);
 			path = "iTunes SearchTests";
@@ -279,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7266C5A42429265A00AA5FB0 /* MockDataLoading.swift in Sources */,
 				7266C5972429186600AA5FB0 /* SearchResultControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
